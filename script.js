@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // page switching
     switchPage('hero-section')
-    const links = document.querySelectorAll('nav .link, .categories .link, .mobile-nav li')
+    const links = document.querySelectorAll('.link, .mobile-nav li, .logo')
     links.forEach(link => {  
         console.log(link)
         link.onclick = (e) => {
