@@ -511,7 +511,8 @@ svg {
     gap: 2rem;
 }
 
-.categories li a {
+.categories li {
+    cursor: pointer;
     font-size: clamp(1.6rem, 2.4vw, 1.6rem);
 }
 
