@@ -562,6 +562,17 @@ svg {
 }
 
 .resume-section{
+    flex-direction: column;
+    margin-top: 11rem;
+    width: 100%;
+}
+
+.resume-edu-title {
+    font-size: var(--fz-xxl);
+    margin-left: 3rem;
+}
+
+.resume-edu-content {
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
@@ -573,7 +584,7 @@ svg {
     font-size: 1.8rem;
     text-transform: uppercase;
     font-weight: 700;
-    color: var(--my-green);
+    color: var(--light-green);
     margin-bottom: 1rem;
     text-align: center;
     justify-self: center;
@@ -582,7 +593,7 @@ svg {
 .resume-tech-heading{
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--my-green);
+    color: var(--light-green);
     margin-bottom: 1rem;
     text-align: center;
     margin-top: 4rem;
@@ -598,7 +609,7 @@ svg {
     flex: 1;
 }
 
-.resume-edu-details h2{
+.resume-edu-details h3{
     font-weight: 700;
     color: var(--my-purple);
 }
@@ -608,9 +619,9 @@ svg {
     max-width: 100%;
 }
 
-.resume-edu-details h3{
+.resume-edu-details h4{
     font-weight: 700;
-    color: var(--my-green);
+    color: var(--light-green);
     font-style: italic;
 }
 
@@ -641,7 +652,6 @@ svg {
 .resume-tech-card{
     display: flex;
     flex-flow: column nowrap;
-    /* justify-content: center; */
     gap: 1rem;
     padding: 1rem;
     background-color: var(--my-purple);
