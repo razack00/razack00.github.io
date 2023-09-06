@@ -344,7 +344,7 @@ svg {
     /* flex-direction: column; */
     line-height: 1;
     align-items: center;
-    letter-spacing: -0.4rem;
+    letter-spacing: -0.3rem;
     font-size: clamp(5rem, 8vw, 9.4rem);
 }
 
