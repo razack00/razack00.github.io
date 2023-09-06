@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // creating spans for hover effect on hero title
     const title = document.querySelector('.intro')
-    const text = "WebDeveloper &Designer".split(" ")
+    const text = "FrontendDeveloper &ITSupport".split(" ")
     text.forEach(function(word) {
         let chars = word.split('')
         let div = document.createElement('div')
@@ -96,5 +96,3 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     
 })
-
-
