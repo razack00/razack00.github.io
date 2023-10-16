@@ -26,6 +26,16 @@ function switchPage(newPage) {
     console.log(newPage)
 }
 
+// navbar background visibility on scroll functionality    
+function scrolled() {
+    const nav = document.querySelector('header')
+    if (window.scrollY > 100) {
+            nav.classList.add('scrolled')
+    }else {
+            nav.classList.remove('scrolled')
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
       //add logic for toggling the menu
@@ -46,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
     switchPage('hero-section')
     const links = document.querySelectorAll('.link, .mobile-nav li, .logo')
     links.forEach(link => {  
-        console.log(link)
         link.onclick = (e) => {
             menu.style.display = 'none'
             page = e.target.dataset.page
@@ -77,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         element[i].style.transform = "rotate("+i*12.2+"deg)"
     }
 
-    // mouse follow logic
+    // mouse follow functionality
     let cursor = document.querySelector('.cursor')
     document.addEventListener('mousemove', (e) => {
         cursor.style.cssText =  'left: ' + (e.clientX+30) + 'px; top: ' + (e.clientY+40) + 'px;';
@@ -94,5 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
             project.lastElementChild.style.display = 'none'
         }
     })
-    
+
+    // navbar background visibility on scroll 
+    window.addEventListener('scroll', function() {
+        scrolled()
+    })
 })
