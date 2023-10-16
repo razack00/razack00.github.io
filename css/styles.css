@@ -87,13 +87,20 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1111;
+    background-color: var(--bg-color);
+    transition: background-color 1s
 }
+
+.scrolled {
+    background-color: #171724;
+}
+
 .accent {
     color: var(--light-green);
 }
@@ -467,10 +474,17 @@ svg {
     padding-block: 1.3rem;
 }
 
+.skill {
+    min-width: 130px;
+}
+
 .skills-wrapper {
     display: flex;
     width: 80%;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-bottom: 3.5rem;
 }
 
 .skills h2 {
