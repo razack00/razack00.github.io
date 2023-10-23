@@ -694,6 +694,11 @@ svg {
     margin: 1rem 0;
 }
 
+.blog-section {
+    background-color: white;
+    color: black
+}
+
 .contact-section {
     flex-direction: column;
     align-items: center;
