@@ -352,7 +352,7 @@ svg {
     line-height: 1;
     align-items: center;
     letter-spacing: -0.3rem;
-    font-size: clamp(5rem, 8vw, 9.4rem);
+    font-size: clamp(4rem, 7vw, 8.4rem);
 }
 
 .hero-section .intro div span {
@@ -695,8 +695,23 @@ svg {
 }
 
 .blog-section {
-    background-color: white;
-    color: black
+    width: 100%;
+    flex-direction: column;
+    margin-top: 11rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.blog-content-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-posts {
+    border-left: 1px solid var(--gray);
+    padding: .5rem;
+    width: 20%;
 }
 
 .contact-section {
