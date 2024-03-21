@@ -606,6 +606,15 @@ svg {
     transition: 5s;
 }
 
+.modal-overlay {
+    width: 100%;
+    background-color: #00000026;
+    height: 100%;
+    position: absolute;
+    z-index: 666666;
+    display: none;
+}
+
 .modal-show {
     display: flex;
 }
@@ -687,6 +696,10 @@ svg {
     gap: 1rem;
 }
 
+.blog-page-title {
+    padding-bottom: 3rem;
+}
+
 .blogs-container {
     width: 80%;
     display: flex;
@@ -696,7 +709,7 @@ svg {
 .blogs{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 2rem;
     width: 70%;
 }
 
@@ -715,7 +728,7 @@ svg {
 .blog-post .blog-post-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    height: 100%;
     width: 72%;
 }
 
@@ -728,21 +741,31 @@ svg {
     font-size: 1.5rem;
 }
 
+.blog-post .blog-post-content a {
+    padding: 3px 5px;
+    text-shadow: none;
+    font-size: var(--fs-xs);
+    background-color: var(--green);
+    width: fit-content;
+    border-radius: .8rem;
+    margin-top: 1.3rem;
+}
+
 .side-bar {
     border-left: 1px solid var(--gray);
-    padding: .5rem;
+    padding-left: 1.5rem;
     width: 23%;
+}
+
+.side-bar .title {
+    margin-bottom: 1.5rem;
 }
 
 .side-bar .blog-post {
     flex-direction: column;
 }
 
-.side-bar .blog-post img {
-    width: 100%;
-}
-
-.side-bar .blog-post .blog-post-content {
+.side-bar .blog-post .blog-post-content, .side-bar .blog-post img {
     width: 100%;
 }
 
@@ -755,7 +778,22 @@ svg {
 }
 
 .blogDetails-section {
-    margin-top: 100px;
+    width: 100%;
+    margin-top: 11rem;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.blog-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+    width: 70%;
+}
+
+.blog-details img {
+    width: 100%;
 }
 
 .contact-section {
@@ -818,6 +856,10 @@ svg {
     }
     .menu-btn{
         display: flex;
+    }
+    .blog-details {
+        gap: 2.5rem;
+        width: 90%;
     }
 } 
 
