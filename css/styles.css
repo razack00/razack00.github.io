@@ -63,7 +63,6 @@ html {
 }
 
 body {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,10 +83,6 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -95,6 +90,15 @@ header {
     z-index: 11;
     background-color: var(--bg-color);
     transition: background-color 1s
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1500px;
+    margin: auto
 }
 
 .scrolled {
@@ -116,6 +120,7 @@ a {
     align-items: center;
     position: relative;
     padding: .5rem;
+    cursor: pointer;
     text-shadow: 0px 0px 3px #000;
 }
 
@@ -312,7 +317,7 @@ svg {
 
 
 /* Hero section styles */
-.hero-section {
+.home-section {
     display: flex;
     flex-direction: column;
     padding: 6.5rem 1rem 1rem 1rem;
@@ -332,7 +337,7 @@ svg {
     gap: 2.5rem;
 }
 
-.hero-section .desc {
+.home-section .desc {
     font-size: 1.6rem;
     font-weight: 500;
     font-family: var(--ff-chillax-r);
@@ -342,31 +347,31 @@ svg {
     width: 60%;
 }
 
-.hero-section .intro {
+.home-section .intro {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative
 }
 
-.hero-section .intro div {
-    font-weight: 800;
+.home-section .intro div {
+    font-weight: 700;
     display: flex;
     line-height: 1;
     align-items: center;
     letter-spacing: -.15rem;
-    font-size: clamp(4rem, 7vw, 7.5rem);
+    font-size: clamp(4rem, 6vw, 6.5rem);
 }
 
-.hero-section .intro div span {
+.home-section .intro div span {
     font-family: 'grandslang-roman'!important;
 }
 
-.hero-section .intro div:nth-child(1) span:nth-child(8), .hero-section .intro div:nth-child(2) span:nth-child(1), .hero-section .intro div:nth-child(2) span:nth-child(10) {
+.home-section .intro div:nth-child(1) span:nth-child(8), .home-section .intro div:nth-child(2) span:nth-child(1), .home-section .intro div:nth-child(2) span:nth-child(10) {
     padding-right: 2rem
 }
 
-.hero-section .intro div span:hover{
+.home-section .intro div span:hover{
     color: var(--light-green);
     animation: animate 0.8s ease-in-out forwards;
   }
@@ -422,6 +427,7 @@ svg {
     bottom: .5rem;
     left: -5rem;
     letter-spacing: -.4rem;
+    text-transform: capitalize;
     font-weight: 400;
     color: #131320;
     transition: all 0.8s ease 0s;
@@ -435,6 +441,7 @@ svg {
     width: 100%;
     gap: 5px;
     flex-wrap: wrap;
+    /* position: relative; */
 }
 
 .about-section .about-content{
@@ -464,11 +471,11 @@ svg {
     background-repeat: no-repeat;
     border-bottom-left-radius: 1rem ;
     width: 31.6rem;
-    height: 80vh;
+    height: 70vh;
     position: fixed;
     margin: auto;
     font-size: 1.4rem;
-    top: 8rem;
+    top: 7rem;
     right: 0;
 }
 
@@ -507,7 +514,7 @@ svg {
 }
 /* End About styles */
 
-.project-section {
+.projects-section {
     flex-direction: column;
     padding-block: 12rem; 
     align-items: center;
@@ -515,7 +522,7 @@ svg {
     position: relative;
 }
 
-.project-section h2 {
+.projects-section h2 {
     align-self: flex-start;
     margin-left: 10rem;
 }
@@ -554,8 +561,8 @@ svg {
 .project  {
     position: relative;
     flex: 1;
-    min-width: 35rem;
-    width: 100%;
+    min-width: 33rem;
+    max-width: 50%;
     height: 30rem;
     overflow: hidden;
     object-fit: cover;
@@ -606,17 +613,8 @@ svg {
     transition: 5s;
 }
 
-.modal-overlay {
-    width: 100%;
-    background-color: #00000026;
-    height: 100%;
-    position: absolute;
-    z-index: 666666;
-    display: none;
-}
-
 .modal-show {
-    display: flex;
+    display: block;
 }
 
 .modal-header {
@@ -806,9 +804,9 @@ svg {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    max-width: 50rem;
-    padding: 2.5rem;
+    width: 40%;
+    min-width: 40rem;
+    padding: 2.2rem;
     gap: 1.3rem;
 }
 
@@ -838,7 +836,7 @@ svg {
     border-color: #fff;
 }
 
-@media (max-width: 810px){
+@media (max-width: 830px){
     .hero-content .desc {
         padding: 2rem;
         width: 95%;
@@ -861,6 +859,9 @@ svg {
         gap: 2.5rem;
         width: 90%;
     }
+    .project {
+        max-width: 100%;
+    }
 } 
 
 @media (max-width: 550px){
@@ -882,9 +883,16 @@ svg {
     }
     .project {
         height: 25rem;
+        width: 100%;
     }
-    .project-section .subtitle  {
+    .projects {
+        width: 90%;
+    }
+    .projects-section .subtitle  {
         margin-left: 2.3rem !important;
+    }
+    .contact-section form {
+        min-width: 100%;
     }
     
 } 
