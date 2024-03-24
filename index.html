@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://localhost:5500; ..."> -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Razack</title>
     <link rel="stylesheet" href="./css/styles.css">
@@ -15,37 +17,39 @@
 <body>
     <div class="container">
         <header>
-            <a data-page="hero-section" class="logo" href="#">Razack</a>
-            <nav class="primary-nav">
-                <ul class="main-links">
-                    <li><a class="link" data-page="hero-section" href="#home">Home</a></li>
-                    <li><a class="link" data-page="about-section" href="#about">About</a></li>
-                    <li><a class="link" data-page="project-section" href="#portfolio">Projects</a></li>
-                    <li><a class="link" data-page="blog-section" href="#blog">blogs</a></li>
-                    <li><a class="link" data-page="contact-section" href="#contact">Contact</a></li>
-                </ul>
-                <ul class="social-icons">
-                    <li>
-                        <a href="https://twitter.com/A_Razack00" target="_blank">
-                            <svg class="social-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M13.567 5.144c.008.123.008.247.008.371 0 3.796-2.889 8.173-8.172 8.173v-.002A8.131 8.131 0 011 12.398a5.768 5.768 0 004.25-1.19 2.876 2.876 0 01-2.683-1.995c.431.083.875.066 1.297-.05A2.873 2.873 0 011.56 6.348v-.036c.4.222.847.345 1.304.36a2.876 2.876 0 01-.89-3.836 8.152 8.152 0 005.92 3 2.874 2.874 0 014.895-2.619 5.763 5.763 0 001.824-.697 2.883 2.883 0 01-1.262 1.588A5.712 5.712 0 0015 3.656a5.834 5.834 0 01-1.433 1.488z"/>
-                            </svg> 
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/razack00" target="_blank">
-                            <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <rect/>
-                                <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"/>
-                            </svg>
-                        </a>    
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/a-razack-72370a225/" target="_blank">
-                            <svg class="social-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path  d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"/></svg>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="nav-container">
+                <a data-page="home" class="logo" href="#home">Razack</a>
+                <nav class="primary-nav">
+                    <ul class="main-links">
+                        <li><a class="link" data-page="home" href="#home">Home</a></li>
+                        <li><a class="link" data-page="about" href="#about">About</a></li>
+                        <li><a class="link" data-page="projects" href="#projects">Projects</a></li>
+                        <li><a class="link" data-page="blog" href="#blog">blogs</a></li>
+                        <li><a class="link" data-page="contact" href="#contact">Contact</a></li>
+                    </ul>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="https://twitter.com/A_Razack00" target="_blank">
+                                <svg class="social-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M13.567 5.144c.008.123.008.247.008.371 0 3.796-2.889 8.173-8.172 8.173v-.002A8.131 8.131 0 011 12.398a5.768 5.768 0 004.25-1.19 2.876 2.876 0 01-2.683-1.995c.431.083.875.066 1.297-.05A2.873 2.873 0 011.56 6.348v-.036c.4.222.847.345 1.304.36a2.876 2.876 0 01-.89-3.836 8.152 8.152 0 005.92 3 2.874 2.874 0 014.895-2.619 5.763 5.763 0 001.824-.697 2.883 2.883 0 01-1.262 1.588A5.712 5.712 0 0015 3.656a5.834 5.834 0 01-1.433 1.488z"/>
+                                </svg> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/razack00" target="_blank">
+                                <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect/>
+                                    <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"/>
+                                </svg>
+                            </a>    
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/a-razack-72370a225/" target="_blank">
+                                <svg class="social-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path  d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
             <div class="menu-btn">
                 <div class="item1"></div>
                 <div class="item2"></div>
@@ -54,11 +58,11 @@
             <nav class="mobile-nav">
                 <div class="menu">
                     <ul>
-                        <li data-page="hero-section">Home</li>
-                        <li data-page="about-section">About</li>
-                        <li data-page="project-section">Projects</li>
-                        <li data-page="blog-section">blog</li>
-                        <li data-page="contact-section">Contact</li>
+                        <li data-page="home"><a href="#home">Home</a></li>
+                        <li data-page="about"><a href="#about">About</a></li>
+                        <li data-page="projects"><a href="#projects">Projects</a></li>
+                        <li data-page="blog"><a href="#blog">Blog</a></li>
+                        <li data-page="contact"><a href="#contact">Contact</a></li>
                     </ul>
                     <div class="mobile-socials">
                         <a class="sideBar sideBar-left" href="mailto: A.razack6536@gmail.com"  target="_blank">A.razack6536@gmail.com</a>
@@ -81,7 +85,7 @@
                 </div>
             </nav>
         </header>
-        <main class="hero-section page" id="home">
+        <main class="home-section page" id="home">
             <div class="hero-content">
                 <h1 class="intro">
                     <!-- <p class="greet">hello</p>
@@ -91,8 +95,8 @@
                 <div class="desc">
                     <p>Hi, I'm Razack. A Frontend developer, Supply Chain & Logistics Analyst specializing  in building exceptional <span class="accent">digital experience</span>. based in Cameroon.</p>
                     <div class="hero-links">
-                        <a class="link" data-page="about-section" href="#"><i class="fa-solid fa-arrow-right-long"></i>more about me</a>
-                        <a class="link" data-page="project-section" href="#"><i class="fa-solid fa-arrow-right-long"></i>view my projects</a>
+                        <a class="link" data-page="about" href="#about"><i class="fa-solid fa-arrow-right-long"></i>more about me</a>
+                        <a class="link" data-page="projects" href="#projects"><i class="fa-solid fa-arrow-right-long"></i>view my projects</a>
                     </div>
                 </div>
             </div>
@@ -103,7 +107,7 @@
             <div class="about-content">
                 <h2 class="subtitle">About.</h2>
                 <div class="about-section-content">
-                    <h3>Hi, I am Razack. A passionate Information Technology professional based in Cameroon </h3>
+                    <h3>Hi, I am Razack, a passionate Information Technology professional based in Cameroon </h3>
                     <div>
                         <p>I'm a passionate Front-End Developer with a strong background in Supply Chain & Logistics analysis. I leverage my combined skillset to build user-centered, efficient web applications that not only look great but also optimize user experience.</p>
 
@@ -158,7 +162,7 @@
             <div class="abt-img">
             </div>
         </section>
-        <section class="project-section page" id="portfolio">
+        <section class="projects-section page" id="portfolio">
             <h2 class="subtitle">Projects.</h2>
             <div class="projects-container">
                 <ul class="categories">
@@ -173,32 +177,21 @@
             </div>
         </section>
         <section class="blog-section page" id="blog">
-            <h2>Blogs</h2>
+            <h2 class="blog-page-title">Blogs</h2>
             <div class="blogs-container">
                 <ul class="blogs">
                     
                 </ul>
                 <div class="side-bar">
-                    <ul>
-                        <li>
-                            <a href="#" class="blog-post">
-                                <img src="/assets/media/bmw.jpg" alt="blog post">
-                                <div class="blog-post-content">
-                                    <h2>Lorem ipsum dolor sit amet consectetur, adipisicing </h2>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi necessitatibus adipisicing... </p>
-                                </div>
-                            </a>
-                        </li>
+                    <h2 class="title">Recent Post</h2>
+                    <ul class="recent-blogs">
+                        <!-- Recent blog dynamically display here -->
                     </ul>
                 </div>
             </div>
         </section>
         <section class="blogDetails-section page" id="blogDetails">
-            <h2>Blog Title</h2>
-            <p>blog Details Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe voluptas quia eaque necessitatibus possimus, voluptatum, quidem, tenetur deleniti voluptates cupiditate tempore obcaecati doloremque! Qui sequi sit blanditiis incidunt, et voluptates fuga atque animi expedita soluta laborum tenetur est corporis, reprehenderit maxime molestiae veniam sint exercitationem odit nobis corrupti alias eligendi!
-                voluptates fuga atque animi expedita soluta laborum tenetur est corporis, reprehenderit maxime molestiae veniam sint exercitationem odit nobis corrupti alias eligendi!
-                voluptates fuga atque animi expedita soluta laborum tenetur est corporis, reprehenderit maxime molestiae veniam sint exercitationem odit nobis corrupti alias eligendi!
-            </p>
+            <!-- Blog Details here -->
         </section>
         <section class="contact-section page" id="#contact">
             <h2>Get in Touch</h2>
