@@ -1,63 +1,25 @@
-{
-  "blogs": [
-    {
-      "id": "ad49",
-      "image": "/assets/media/bmw.jpg",
-      "title": "dfdfdfdfd",
-      "body": "fdfdfdfdfdf234raz",
-      "author": "yoshi"
-    },
-    {
-      "id": "fe8b",
-      "image": "/assets/media/bmw.jpg",
-      "title": "dfdffdfdfdff",
-      "body": "dfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdf",
-      "author": "yoshi"
-    },
-    {
-      "id": "6af4",
-      "image": "/assets/media/bmw.jpg",
-      "title": "ddfdfdfdfd",
-      "body": "dffds34324444444444444444444444444",
-      "author": "yoshi"
-    },
-    {
-      "id": "d0a9",
-      "image": "/assets/media/bmw.jpg",
-      "title": "account",
-      "body": "account things",
-      "author": "yoshi"
-    },
-    {
-      "id": "56f7",
-      "image": "/assets/media/bmw.jpg",
-      "title": "vfdvf",
-      "body": "fgfgfgfg",
-      "author": "yoshi"
-    }
-  ],
-  "projects": [
+[
     {
       "id": "ac49",
-      "image": "/assets/media/bmw.jpg",
-      "name": "dfdfdfdfdfdfdf9",
-      "about": "You can combine these strategies depending on your specific needs. For example, you might use role='button' for divs that need click functionality and event listeners for divs that only require hover effects.",
+      "image": "/assets/media/e-store.png",
+      "name": "E-Store",
+      "about": "A responsive e-commerce shoe store that include search, categorisation, authentication and authorisation functionalities. Built with HTML, CSS JavaScript",
       "category": "Web Development",
-      "technologies": ["HTML", "CSS", "JavaScript", "Github"],
-      "functionalities": ["Fetch", "Form submit", "Responsive", "Animations"],
-      "site_link": "https://google.com",
-      "github_link": "https://google.com"
+      "technologies": ["HTML", "CSS", "JavaScript", "Github", "Fetch"],
+      "functionalities": ["Fetching producs use (Fetch)", "Authentication and Autorisation", "Filtering Products", "Add to Cart", "Display Product Details"],
+      "site_link": "https://ecom-shoe-store.netlify.app/",
+      "github_link": "https://github.com/razack00/e-store"
     },
     {
       "id": "ac42",
       "image": "/assets/media/bmw.jpg",
-      "name": "dfdfdfdfdfdfdfd crystal display",
-      "about": "You can combine these strategies depending on your specific needs. For example, you might use role='button' for divs that need click functionality and event listeners for divs that only require hover effects.",
+      "name": "Car Rentals BMW",
+      "about": "Car-Rentals site that I built to demonstrate by mostly my css skills and still planning on adding more to that. Built with HTML, CSS JavaScript",
       "category": "Web Development",
       "technologies": ["HTML", "CSS", "JavaScript", "Github"],
       "functionalities": ["Fetch", "Form submit", "Responsive", "Animations"],
-      "site_link": "https://google.com",
-      "github_link": "https://google.com"
+      "site_link": "https://car-rentals-bmw.netlify.app/",
+      "github_link": "https://github.com/razack00/car-website"
     },
     {
       "id": "ac44",
@@ -114,13 +76,4 @@
       "site_link": "https://google.com",
       "github_link": "https://google.com"
     }
-  ],
-  "categoryList": {
-    "categories": [
-      "All",
-      "Web Development",
-      "Design",
-      "Enterprise"
-    ]
-  }
-}
+]
