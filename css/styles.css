@@ -10,6 +10,7 @@ html {
 :root {
     /* colors */
     --light-green: #08FDD8;
+    --green: #03a68e;
     --text-color: #E6F1FF;
     --bg-color:  #10101A;
     --dark-text: #040c18;
@@ -22,14 +23,14 @@ html {
 
     /* font-sizes */
     --primary-heading: 5rem;
-    --fz-xxs: 1.2rem;
-    --fz-xs: 1.3rem;
-    --fz-sm: 1.7rem;
-    --fz-md: 1.9rem;
-    --fz-lg: 2.1rem;
-    --fz-xl: 2.5rem;
-    --fz-xxl: 5.2rem;
-    --fz-heading: 3.2rem;
+    --fs-xxs: 1.2rem;
+    --fs-xs: 1.3rem;
+    --fs-sm: 1.7rem;
+    --fs-md: 1.9rem;
+    --fs-lg: 2.1rem;
+    --fs-xl: 2.5rem;
+    --fs-xxl: 5.2rem;
+    --fs-heading: 3.2rem;
     --border-radius: .4rem;
     --nav-height: 10rem;
     --nav-scroll-height: 7rem;
@@ -55,7 +56,6 @@ html {
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    list-style-type: none;
     text-decoration: none;
     border: none;
     outline: none;
@@ -63,7 +63,6 @@ html {
 }
 
 body {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,17 +83,22 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1111;
+    z-index: 11;
     background-color: var(--bg-color);
     transition: background-color 1s
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1500px;
+    margin: auto
 }
 
 .scrolled {
@@ -106,17 +110,22 @@ header {
 }
 
 .active {
-    color: var(--light-green) !important;
+    color: var(--light-green);
 }
 
 a {
-    font-size: var(--fz-sm);
+    font-size: var(--fs-sm);
     color: var(--text-color);
     display: flex;
     align-items: center;
     position: relative;
     padding: .5rem;
+    cursor: pointer;
     text-shadow: 0px 0px 3px #000;
+}
+
+ul {
+    list-style-type: none;
 }
 /* End General styles */
 
@@ -124,7 +133,7 @@ a {
 /* Nav Styles */
 
 .logo {
-    font-size: var(--fz-xl);
+    font-size: var(--fs-xl);
     color: var(--text-color);
     font-style: normal;
     font-weight: 600;
@@ -219,6 +228,7 @@ a {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    list-style-type: none;
 }
 .menu li{
     font-weight: 700;
@@ -227,7 +237,7 @@ a {
     transition: all 0.3s ease-in-out;
     /* border-bottom: 1px solid var(--light-navy); */
     width: 100%;
-    font-size: var(--fz-xxl);
+    font-size: var(--fs-xxl);
     font-family: 'grandslang-roman';    
     padding-block: .6rem;
 }
@@ -241,7 +251,6 @@ a {
 }
 
 /* End mobile nav */
-  
 svg {
     fill: var(--dark-text);
     width: 2.4rem;
@@ -308,7 +317,7 @@ svg {
 
 
 /* Hero section styles */
-.hero-section {
+.home-section {
     display: flex;
     flex-direction: column;
     padding: 6.5rem 1rem 1rem 1rem;
@@ -328,7 +337,7 @@ svg {
     gap: 2.5rem;
 }
 
-.hero-section .desc {
+.home-section .desc {
     font-size: 1.6rem;
     font-weight: 500;
     font-family: var(--ff-chillax-r);
@@ -338,32 +347,31 @@ svg {
     width: 60%;
 }
 
-.hero-section .intro {
+.home-section .intro {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative
 }
 
-.hero-section .intro div {
-    font-weight: 900;
+.home-section .intro div {
+    font-weight: 700;
     display: flex;
-    /* flex-direction: column; */
     line-height: 1;
     align-items: center;
-    letter-spacing: -0.3rem;
-    font-size: clamp(4rem, 7vw, 8.4rem);
+    letter-spacing: -.15rem;
+    font-size: clamp(4rem, 6vw, 6.5rem);
 }
 
-.hero-section .intro div span {
+.home-section .intro div span {
     font-family: 'grandslang-roman'!important;
 }
 
-.hero-section .intro div:nth-child(1) span:nth-child(8), .hero-section .intro div:nth-child(2) span:nth-child(1), .hero-section .intro div:nth-child(2) span:nth-child(3) {
+.home-section .intro div:nth-child(1) span:nth-child(8), .home-section .intro div:nth-child(2) span:nth-child(1), .home-section .intro div:nth-child(2) span:nth-child(10) {
     padding-right: 2rem
 }
 
-.hero-section .intro div span:hover{
+.home-section .intro div span:hover{
     color: var(--light-green);
     animation: animate 0.8s ease-in-out forwards;
   }
@@ -419,6 +427,7 @@ svg {
     bottom: .5rem;
     left: -5rem;
     letter-spacing: -.4rem;
+    text-transform: capitalize;
     font-weight: 400;
     color: #131320;
     transition: all 0.8s ease 0s;
@@ -432,6 +441,7 @@ svg {
     width: 100%;
     gap: 5px;
     flex-wrap: wrap;
+    /* position: relative; */
 }
 
 .about-section .about-content{
@@ -461,11 +471,11 @@ svg {
     background-repeat: no-repeat;
     border-bottom-left-radius: 1rem ;
     width: 31.6rem;
-    height: 80vh;
+    height: 70vh;
     position: fixed;
     margin: auto;
     font-size: 1.4rem;
-    top: 8rem;
+    top: 7rem;
     right: 0;
 }
 
@@ -474,7 +484,12 @@ svg {
     padding-block: 1.3rem;
 }
 
-.skill {
+.square-ul-list {
+    list-style-type: circle !important;
+    padding-left: 20px
+}
+
+.skills {
     min-width: 130px;
 }
 
@@ -487,26 +502,27 @@ svg {
     padding-bottom: 3.5rem;
 }
 
-.skills h2 {
+.skills-section h2 {
     font-family: "grandslang-roman";
     font-size: 3.5rem !important;
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
-.skills h3 {
+.skills-section h3 {
     font-size: 2rem !important;
     margin: 2rem 0rem 1rem 0rem !important;
 }
 /* End About styles */
 
-.project-section {
+.projects-section {
     flex-direction: column;
     padding-block: 12rem; 
     align-items: center;
     gap: 5rem;
+    position: relative;
 }
 
-.project-section h2 {
+.projects-section h2 {
     align-self: flex-start;
     margin-left: 10rem;
 }
@@ -526,8 +542,10 @@ svg {
 }
 
 .categories li {
+    position: relative;
+    padding: 5px;
     cursor: pointer;
-    font-size: clamp(1.6rem, 3.4vw, 1.6rem);
+    /* font-size: clamp(1.6rem, 3.4vw, 1.6rem); */
 }
 
 .projects {
@@ -543,12 +561,13 @@ svg {
 .project  {
     position: relative;
     flex: 1;
-    min-width: 35rem;
-    width: 100%;
+    min-width: 33rem;
+    max-width: 50%;
     height: 30rem;
     overflow: hidden;
     object-fit: cover;
     border-radius: 10px;
+    cursor: pointer;
 }
 .project img {
     width: 100%;
@@ -576,122 +595,95 @@ svg {
     gap: 1rem
 }
 
-.resume-section{
+.modal {
+    display: none;
+    background-color: white;
+    height: 100vh;
+    width: 50%;
+    color: black;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    z-index: 13;
+    padding: 10px;
     flex-direction: column;
-    margin-top: 11rem;
+    gap: 10px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    transition: 5s;
+}
+
+.modal-show {
+    display: block;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2 solid gray;
+    padding-bottom: 15px;
+}
+
+.modal img {
     width: 100%;
+    border-radius: 10px;
 }
 
-.resume-edu-title {
-    font-size: var(--fz-xxl);
-    margin-left: 3rem;
+.modal-header .modal-title {
+    font-size: var(--fs-md);
+    text-align: center;
+    width: 90%;
+    padding-right: 10px;
+    padding-top: 10px;
 }
 
-.resume-edu-content {
+.modal-subtitle {
+    padding-block: 10px;
+}
+
+.modal button {
+    font-size: var(--fs-xl);
+    object-fit:contain;
+    padding-inline: 5px;
+    background-color: transparent;
+}
+
+.modal button:hover {
+    color: var(--light-green);
+}
+
+.modal .modal-links {
+    display: flex;
+    gap: 15px;
+}
+
+.modal .technologies {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
-    padding: 4rem 3rem;
-    width: 100%;
-}
-
-.resume-edu-heading{
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: var(--light-green);
-    margin-bottom: 1rem;
-    text-align: center;
-    justify-self: center;
-}
-
-.resume-tech-heading{
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--light-green);
-    margin-bottom: 1rem;
-    text-align: center;
-    margin-top: 4rem;
-}
-
-.resume-edu-details{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    border-radius: 4px;
-    flex: 1;
 }
 
-.resume-edu-details h3{
-    font-weight: 700;
-    color: var(--my-purple);
+.modal .technologies span {
+    margin-inline: 5px;
+    padding: 5px ;
+    background-color: rgb(208, 208, 210);
+    border-radius: 5px;
+    font-size: var(--fs-xs);
 }
 
-.resume-edu-card-desc-text{
-    width: 600px;
-    max-width: 100%;
-}
-
-.resume-edu-details h4{
-    font-weight: 700;
-    color: var(--light-green);
-    font-style: italic;
-}
-
-.resume-edu-card-desc-date{
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--my-purple);
-    margin: .5rem 0;
-    padding: 0px;
-}
-
-.resume-edu-details p + p {
-    margin-top: 1rem;
-    color: var(--my-purple);
-    opacity: 0.8;
-    padding: 0px;
-}
-
-.resume-techs-container{
-    display: flex;
-    flex-flow: row wrap;
+.modal a {
+    font-weight: 500;
+    font-size: var(--fs-xs);
+    text-shadow: none;
+    background-color: var(--dark-navy);
+    border-radius: 20px;
+    width: 80px;
     justify-content: center;
-    gap: 1rem;
-    margin: 0 auto;
-    padding: 2rem 0;
+    transition: .4s;
 }
 
-.resume-tech-card{
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem;
-    padding: 1rem;
-    background-color: var(--my-purple);
-    color: #fff;
-    border-radius: 4px;
-    width: 300px;
-    height: 310px;
-    overflow-y: scroll;
-    box-shadow: 2px 2px 49px -12px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 2px 2px 49px -12px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 2px 49px -12px rgba(0,0,0,0.75);
-}
-
-.resume-tech-card-title{
-    font-size: 2.1rem;
-    font-weight: 700;
-    color: var(--my-green);
-}
-
-.resume-tech-card-desc{
-    display: flex;
-    flex-flow: column nowrap;
-    font-size: 1.1rem;
-    font-weight: 400;
-    margin: 1rem 0;
+.modal a:hover {
+    background-color: var(--green);
 }
 
 .blog-section {
@@ -702,16 +694,104 @@ svg {
     gap: 1rem;
 }
 
-.blog-content-container {
-    width: 90%;
+.blog-page-title {
+    padding-bottom: 3rem;
+}
+
+.blogs-container {
+    width: 80%;
     display: flex;
     justify-content: space-between;
 }
 
-.blog-posts {
+.blogs{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 70%;
+}
+
+.blog-post {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
+.blog-post img {
+    width: 25%;
+    height: 150px;
+    max-height: 200px;
+}
+
+.blog-post .blog-post-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 72%;
+}
+
+.blog-post .blog-post-content h2 {
+    font-size: var(--fs-md);
+    font-weight: 900;
+}
+
+.blog-post .blog-post-content p {
+    font-size: 1.5rem;
+}
+
+.blog-post .blog-post-content a {
+    padding: 3px 5px;
+    text-shadow: none;
+    font-size: var(--fs-xs);
+    background-color: var(--green);
+    width: fit-content;
+    border-radius: .8rem;
+    margin-top: 1.3rem;
+}
+
+.side-bar {
     border-left: 1px solid var(--gray);
-    padding: .5rem;
-    width: 20%;
+    padding-left: 1.5rem;
+    width: 23%;
+}
+
+.side-bar .title {
+    margin-bottom: 1.5rem;
+}
+
+.side-bar .blog-post {
+    flex-direction: column;
+}
+
+.side-bar .blog-post .blog-post-content, .side-bar .blog-post img {
+    width: 100%;
+}
+
+.side-bar .blog-post .blog-post-content h2 {
+    font-size: 1.4rem;
+}
+
+.side-bar .blog-post .blog-post-content p {
+    font-size: var(--fs-xs);
+}
+
+.blogDetails-section {
+    width: 100%;
+    margin-top: 11rem;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.blog-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+    width: 70%;
+}
+
+.blog-details img {
+    width: 100%;
 }
 
 .contact-section {
@@ -724,9 +804,9 @@ svg {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    max-width: 50rem;
-    padding: 2.5rem;
+    width: 40%;
+    min-width: 40rem;
+    padding: 2.2rem;
     gap: 1.3rem;
 }
 
@@ -756,7 +836,7 @@ svg {
     border-color: #fff;
 }
 
-@media (max-width: 810px){
+@media (max-width: 830px){
     .hero-content .desc {
         padding: 2rem;
         width: 95%;
@@ -774,6 +854,13 @@ svg {
     }
     .menu-btn{
         display: flex;
+    }
+    .blog-details {
+        gap: 2.5rem;
+        width: 90%;
+    }
+    .project {
+        max-width: 100%;
     }
 } 
 
@@ -796,9 +883,16 @@ svg {
     }
     .project {
         height: 25rem;
+        width: 100%;
     }
-    .project-section .subtitle  {
+    .projects {
+        width: 90%;
+    }
+    .projects-section .subtitle  {
         margin-left: 2.3rem !important;
+    }
+    .contact-section form {
+        min-width: 100%;
     }
     
 } 

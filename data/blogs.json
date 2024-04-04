@@ -1,0 +1,42 @@
+[
+    {
+        "id": "ad49",
+        "image": "/assets/media/bmw.jpg",
+        "title": "dfdfdfdfd",
+        "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi necessitatibus adipisicing... z",
+        "author": "yoshi",
+        "date": "2024-01-29"
+    },
+    {
+        "id": "fe8b",
+        "image": "/assets/media/bmw.jpg",
+        "title": "dfdffdfdfdff",
+        "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi necessitatibus adipisicing Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi necessitatibus adipisicingLorem ipsum dolor, sit amet consectetur adipisicing elit. Modi necessitatibus adipisicing... ",
+        "author": "yoshi",
+        "date": "2024-02-29"
+    },
+    {
+        "id": "6af4",
+        "image": "/assets/media/bmw.jpg",
+        "title": "ddfdfdfdfd",
+        "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi necessitatibus adipisicing",
+        "author": "yoshi",
+        "date": "2024-01-02"
+    },
+    {
+        "id": "d0a9",
+        "image": "/assets/media/bmw.jpg",
+        "title": "account",
+        "body": "account things",
+        "author": "yoshi",
+        "date": "2024-03-20"
+    },
+    {
+        "id": "56f7",
+        "image": "/assets/media/bmw.jpg",
+        "title": "Lorem ipsum dolor, sit amet consectetur adipisicing ",
+        "body": "elit. Modi necessitatibus adipisicing Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi necessitatibus adipisicing",
+        "author": "yoshi",
+        "date": "2024-03-09"
+    }
+]
