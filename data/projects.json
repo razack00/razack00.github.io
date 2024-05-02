@@ -34,7 +34,7 @@
     },
     {
       "id": "8717",
-      "image": "/assets/media/Viva express.jpg",
+      "image": "/assets/media/viva-express.jpg",
       "name": "Viva Express",
       "about": "A Bus  travel agency booking system website which allows travelers/passengers to book a bus ticket from the comfort or their homes or where ever the may be.",
       "category": "Web Development",
@@ -45,8 +45,8 @@
     },
     {
       "id": "87175",
-      "image": "",
-      "name": "Portfolio v2",
+      "image": "/assets/media/portfolio-v2.jpg",
+      "name": "portfolio-v2",
       "about": "Self-Built Portfolio Website demonstrates my skills in web development and design. It showcases my ability to: Design and implement a user-friendly interface (UI), to utilize web development technologies like HTML, CSS, and Javascript to create a dynamic and responsive website, integrate multimedia elements (images, videos) to effectively present my work and also to apply best practices for SEO to increase the website's visibility.",
       "category": "Web Development",
       "technologies": ["HTML", "CSS", "JavaScript", "Github"],
