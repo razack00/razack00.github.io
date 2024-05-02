@@ -489,17 +489,17 @@ svg {
     padding-left: 20px
 }
 
-.skills {
-    min-width: 130px;
-}
-
 .skills-wrapper {
     display: flex;
-    width: 80%;
+    width: 90%;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1.5rem;
     padding-bottom: 3.5rem;
+}
+
+.skills {
+    min-width: 100px;
 }
 
 .skills-section h2 {
@@ -511,6 +511,10 @@ svg {
 .skills-section h3 {
     font-size: 2rem !important;
     margin: 2rem 0rem 1rem 0rem !important;
+}
+
+.tools {
+    max-width: 180px;
 }
 /* End About styles */
 
