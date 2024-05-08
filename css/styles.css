@@ -594,6 +594,17 @@ svg {
     transition:ease-in-out 6s; */
 }
 
+.tech-preview {
+    padding: 2px 4px;
+    background-color: darkcyan;
+    border-radius: 5px;
+}
+
+.spanCategory {
+    font-size: var(--fs-sm);
+    font-weight: 400;
+}
+
 .project-links {
     display: flex;
     gap: 1rem
@@ -867,6 +878,7 @@ svg {
         max-width: 100%;
     }
 } 
+
 
 @media (max-width: 550px){
 
