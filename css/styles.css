@@ -157,7 +157,7 @@ ul {
     height: fit-content;
 }
 
-.link::after {
+.link::after, .resume-link::after{
     content: '';
     width: 100%;
     height: 1px;
@@ -170,8 +170,13 @@ ul {
     transform: scaleX(0);
 }
 
-.link:hover::after{
+.link:hover::after, .resume-link:hover::after{
     transform: scaleX(1);
+}
+
+.resume-link{
+    background-color: var(--light-navy);
+    padding-block: 2px;
 }
 
 /* mobile nav */
