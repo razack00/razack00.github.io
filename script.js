@@ -48,7 +48,7 @@ async function displayCategories() {
 
 async function setCategory() {
     const projects = await fetchData(API_URL_PROJECTS)    
-    displayProjects(projects) //first render
+    displayProjects(projects, "All") //first render
     const categories = document.querySelectorAll('.category') 
     let selectedCategory = ''
     categories.forEach(category => (
@@ -57,29 +57,32 @@ async function setCategory() {
             category.classList.add('active') //add active class to clicked category
             selectedCategory = e.target.textContent
             if(selectedCategory === "All") {
-                displayProjects(projects) // display all cats when selected category == All
+                displayProjects(projects, selectedCategory) // display all cats when selected category == All
             }
             else {
                 const filteredProjects = projects.filter(project => project.category == selectedCategory)
-                displayProjects(filteredProjects) //display only selected categories
+                displayProjects(filteredProjects, selectedCategory) //display only selected categories
             }
         }
     ))
 }
 
 // Display project
-function displayProjects (projects) {
+function displayProjects (projects, selectedCategory) {
     document.querySelector('.projects').innerHTML = projects.map(project => (
         `<li data-id=${project.id} class="project">
             <img src=${project.image} alt="project image">
             <div class="project-content" data-id=${project.id}>
-                <h3 class="project-title">${project.name}</h3>
-                <p>${project.about}</p>
+                <h3 class="project-title">${project.name} <span class="spanCategory">${(selectedCategory == 'All'? `- (${project.category})` : "")}</span></h3>
+                <p>${project.description}</p>
+                <div>${(project.technologies.map(tech => (
+                    `<span class="tech-preview">${tech}</span>`
+                )).join(' '))}</div>
             </div>
         </li>`
     )).join("")
     projectHoverEffect()
-    filterProject() // attaches onclick event to all projects
+    filterProject() // filters and attaches onclick event to all projects
 }
 
 // Display selected projects in the modal
@@ -104,7 +107,7 @@ function displayProjectDetails(selectedProject) {
             </div>
             <div class="modal-about">
                 <h3 class="modal-subtitle" >About</h3>
-                <p>${selectedProject[0].about}</p>
+                <p>${selectedProject[0].body}</p>
             </div>
             <div class="challenges">
                 <h3 class="modal-subtitle">Functionalities</h3>
@@ -113,8 +116,8 @@ function displayProjectDetails(selectedProject) {
                 )).join("")}
             </div>
             <div class="modal-links">
-                <a href=${selectedProject[0].site_link}>live</a>
-                <a href=${selectedProject[0].github_link}>Github</a>
+                <a target="_blank" href=${selectedProject[0].site_link}>live</a>
+                <a target="_blank" href=${selectedProject[0].github_link}>Github</a>
             </div>
         </dialog>`
     )
