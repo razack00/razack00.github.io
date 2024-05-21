@@ -95,7 +95,7 @@ function displayProjectDetails(selectedProject) {
             </div>
             <img src=${selectedProject[0].image} alt="">
             <div class="technologies">
-                <div>
+                <div class="project-skills">
                     ${selectedProject[0].technologies.map(tech => (
                         `<span>${tech}</span>`
                     )).join("")}
@@ -105,19 +105,21 @@ function displayProjectDetails(selectedProject) {
                     <a href=${selectedProject[0].github_link}>Github</a>
                 </div>
             </div>
-            <div class="modal-about">
-                <h3 class="modal-subtitle" >About</h3>
-                <p>${selectedProject[0].body}</p>
-            </div>
-            <div class="challenges">
-                <h3 class="modal-subtitle">Functionalities</h3>
-                ${selectedProject[0].functionalities.map(func => (
-                    `<p>${func}</p>`
-                )).join("")}
-            </div>
-            <div class="modal-links">
-                <a target="_blank" href=${selectedProject[0].site_link}>live</a>
-                <a target="_blank" href=${selectedProject[0].github_link}>Github</a>
+            <div class="modal-content-container>
+                <div class="modal-about">
+                    <h3 class="modal-subtitle" >About</h3>
+                    <p>${selectedProject[0].body}</p>
+                </div>
+                <div class="functionalities">
+                    <h3 class="modal-subtitle">Functionalities</h3>
+                    ${selectedProject[0].functionalities.map(func => (
+                        `<p>${func}</p>`
+                    )).join("")}
+                </div>
+                <div class="modal-links">
+                    <a target="_blank" href=${selectedProject[0].site_link}>live</a>
+                    <a target="_blank" href=${selectedProject[0].github_link}>Github</a>
+                </div>
             </div>
         </dialog>`
     )
