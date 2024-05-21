@@ -78,7 +78,7 @@ body {
     color: var(--text-color);
     position: relative;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1200px;
     overflow: hidden;
 }
 
@@ -90,15 +90,6 @@ header {
     z-index: 11;
     background-color: var(--bg-color);
     transition: background-color 1s
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    max-width: 1500px;
-    margin: auto
 }
 
 .scrolled {
@@ -132,24 +123,32 @@ ul {
 
 /* Nav Styles */
 
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
 .logo {
     font-size: var(--fs-xl);
     color: var(--text-color);
     font-style: normal;
     font-weight: 600;
+    width: 20%;
 }
 
 .primary-nav {
-    width: 40%;
+    width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
 }
 
 .primary-nav .main-links {
     display: flex;
     width: fit-content;
-    justify-content: space-between;
-    width: 80%;
 }
 
 .primary-nav .main-links li {
@@ -178,9 +177,8 @@ ul {
 /* mobile nav */
 .mobile-nav{
     display: none;
-    width: 100%;
-    background-color: #fff;
-    align-items: center;
+    width: 50%;
+    background-color: #322f5a;
     position: absolute;
     top: 0;
     right: 0;
@@ -243,7 +241,7 @@ ul {
 }
 
 .mobile-social-icons {
-    display: flex;
+    display: none;
 }
 
 .mobile-socials a {
@@ -351,7 +349,8 @@ svg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative
+    position: relative;
+    margin-inline: 10px
 }
 
 .home-section .intro div {
@@ -610,6 +609,7 @@ svg {
     gap: 1rem
 }
 
+/* Model  styles */
 .modal {
     display: none;
     background-color: white;
@@ -624,8 +624,6 @@ svg {
     flex-direction: column;
     gap: 10px;
     overflow-y: auto;
-    scroll-behavior: smooth;
-    transition: 5s;
 }
 
 .modal-show {
@@ -635,39 +633,45 @@ svg {
 .modal-header {
     display: flex;
     align-items: center;
-    border-bottom: 2 solid gray;
-    padding-bottom: 15px;
+    padding-block: 8px;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    gap: 10px;
+    /* box-shadow: 1px 0px 0px 0px rgb(40, 40, 40); */
 }
 
 .modal img {
     width: 100%;
     border-radius: 10px;
+    margin-top: 50px;
 }
 
 .modal-header .modal-title {
     font-size: var(--fs-md);
     text-align: center;
-    width: 90%;
-    padding-right: 10px;
-    padding-top: 10px;
 }
 
-.modal-subtitle {
-    padding-block: 10px;
-}
-
-.modal button {
+.modal .modal-close-btn{
     font-size: var(--fs-xl);
     object-fit:contain;
     padding-inline: 5px;
     background-color: transparent;
+    margin-top: -4px;
+
 }
 
+.modal-subtitle {
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
 .modal button:hover {
     color: var(--light-green);
 }
 
 .modal .modal-links {
+    align-self: flex-start;
     display: flex;
     gap: 15px;
 }
@@ -676,31 +680,46 @@ svg {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 
-.modal .technologies span {
-    margin-inline: 5px;
+.modal .technologies .project-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5%;
+    width: 80%;
+}
+
+.modal .technologies .project-skills span {
     padding: 5px ;
     background-color: rgb(208, 208, 210);
     border-radius: 5px;
     font-size: var(--fs-xs);
+    margin-bottom: 2px;
 }
 
-.modal a {
+.functionalities {
+    margin-bottom: 10px;
+}
+
+.modal-links a {
     font-weight: 500;
     font-size: var(--fs-xs);
     text-shadow: none;
     background-color: var(--dark-navy);
-    border-radius: 20px;
-    width: 80px;
+    border-radius: 5px;
+    padding: 5px;
     justify-content: center;
     transition: .4s;
 }
 
-.modal a:hover {
+.modal-links a:hover {
     background-color: var(--green);
 }
+/* End of project model styles */
 
+
+/* Blog section styles */
 .blog-section {
     width: 100%;
     flex-direction: column;
@@ -877,6 +896,16 @@ svg {
     .project {
         max-width: 100%;
     }
+    .modal {
+        left: 30%;
+        top: 0;
+        width: 70%;
+    }
+    .mobile-social-icons {
+        display: flex;
+        margin-top: 10px;
+    }
+    svg {fill: #E6F1FF ;} 
 } 
 
 
@@ -892,7 +921,6 @@ svg {
         width: 90%;
         border-radius: var(--border-radius);
         margin-top: 4rem
-        
     }
     .about-section {
         flex-direction: column-reverse;
@@ -910,5 +938,9 @@ svg {
     .contact-section form {
         min-width: 100%;
     }
-    
+    .modal {
+        left: 20%;
+        top: 0;
+        width: 80%;
+    } 
 } 
