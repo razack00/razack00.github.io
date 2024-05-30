@@ -364,7 +364,7 @@ svg {
     line-height: 1;
     align-items: center;
     letter-spacing: -.15rem;
-    font-size: clamp(4rem, 6vw, 6.5rem);
+    font-size: clamp(3.8rem, 6vw, 6.5rem);
 }
 
 .home-section .intro div span {
@@ -736,84 +736,64 @@ svg {
 .blog-page-title {
     padding-bottom: 3rem;
 }
-
 .blogs-container {
     width: 80%;
     display: flex;
     justify-content: space-between;
 }
-
 .blogs{
     display: flex;
     flex-direction: column;
     gap: 2rem;
     width: 70%;
 }
-
 .blog-post {
     display: flex;
     align-items: start;
     gap: 10px;
 }
-
 .blog-post img {
     width: 25%;
     height: 150px;
     max-height: 200px;
 }
-
 .blog-post .blog-post-content {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 72%;
 }
-
 .blog-post .blog-post-content h2 {
     font-size: var(--fs-md);
     font-weight: 900;
 }
-
 .blog-post .blog-post-content p {
     font-size: 1.5rem;
 }
-
 .blog-post .blog-post-content a {
-    padding: 3px 5px;
-    text-shadow: none;
     font-size: var(--fs-xs);
-    background-color: var(--green);
-    width: fit-content;
-    border-radius: .8rem;
-    margin-top: 1.3rem;
+    color: var(--light-green);
 }
-
 .side-bar {
     border-left: 1px solid var(--gray);
     padding-left: 1.5rem;
     width: 23%;
 }
-
 .side-bar .title {
     margin-bottom: 1.5rem;
 }
-
 .side-bar .blog-post {
     flex-direction: column;
 }
-
 .side-bar .blog-post .blog-post-content, .side-bar .blog-post img {
     width: 100%;
 }
-
 .side-bar .blog-post .blog-post-content h2 {
     font-size: 1.4rem;
 }
-
 .side-bar .blog-post .blog-post-content p {
     font-size: var(--fs-xs);
 }
-
 .blogDetails-section {
     width: 100%;
     margin-top: 11rem;
@@ -821,24 +801,20 @@ svg {
     gap: 1rem;
     justify-content: center;
 }
-
 .blog-details {
     display: flex;
     flex-direction: column;
     gap: 4.5rem;
     width: 70%;
 }
-
 .blog-details img {
     width: 100%;
 }
-
 .contact-section {
     flex-direction: column;
     align-items: center;
     margin-top: 11rem;
 }
-
 .contact-section form {
     display: flex;
     flex-direction: column;
@@ -848,7 +824,6 @@ svg {
     padding: 2.2rem;
     gap: 1.3rem;
 }
-
 .contact-section form input, textarea {
     backdrop-filter: blur(2rem);
     color: var(--text-color);
@@ -858,11 +833,9 @@ svg {
     border: 1px solid #2b2b32;
     border-radius: var(--border-radius)
 }
-
 .contact-section form textarea {
     min-height: 15rem;
 }
-
 .contact-section form input[type= submit] {
     background-color: #fff;
     color: var(--dark-text);
@@ -870,15 +843,46 @@ svg {
     border: none;
     cursor: pointer;;
 }
-
 .contact-section form input:focus, textarea:focus {
     border-color: #fff;
 }
 
-@media (max-width: 830px){
+@media (max-width: 840px){
     .hero-content .desc {
         padding: 2rem;
         width: 95%;
+    }
+    .blogs-container{
+        width: 95%;
+        flex-direction: column-reverse;
+    }
+    .blogs {
+        width: 100%;
+    }
+    .side-bar {
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 0;
+        border: none;
+    }
+    .side-bar .blog-post {
+        flex-direction: row;
+        width: 100%
+    }
+    .side-bar .blog-post-content{
+        width: 72% !important;
+    }
+
+    .side-bar .blog-post img, .blog-post img{
+        width: 25%;
+        height: 100px;
+    }
+    .blog-post-content h2 {
+        font-size: 1.7rem !important;
+    }
+    
+    .blog-post-content p {
+        font-size: 15px !important;
     }
     .about-section .about-content{
         padding: 12rem 2rem;
@@ -913,14 +917,11 @@ svg {
     svg {fill: #E6F1FF ;} 
 } 
 
-
 @media (max-width: 550px){
-
     .about-section .about-content{
         margin-block: 2rem;
         width: 100%;
     }
-
     .about-section .abt-img {
         position: relative;
         width: 90%;
@@ -947,5 +948,11 @@ svg {
         left: 20%;
         top: 0;
         width: 80%;
+    }
+    .blog-post-content h2 {
+        font-size: 1.3rem !important;
+    }
+    .blog-post-content p {
+        font-size: 12px !important;
     } 
 } 
