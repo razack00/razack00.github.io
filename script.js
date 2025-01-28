@@ -155,8 +155,7 @@ async function displayBlogs() {
             <img src=${blog.image} alt="blog post">
             <div class="blog-post-content">
                 <h2>${blog.title}</h2>
-                <p>${blog.body.slice(0, 200)}... </p>
-                <a data-id=${blog.id} href="#blogDetails" data-page="blogDetails" class="blog-link">Read More</a>
+                <p>${blog.body.slice(0, 120)}...<a data-id=${blog.id} href="#blogDetails" data-page="blogDetails" class="blog-link">Read More</a> </p>
             </div> 
         </li>` )
     ).join("")
@@ -171,8 +170,7 @@ async function displayRecentBlog() {
             <img src=${recentblog[0].image} alt="blog post">
             <div class="blog-post-content">
                 <h2>${recentblog[0].title}</h2>
-                <p>${recentblog[0].body.slice(0, 100)}...</p>
-                <a data-id=${recentblog[0].id} data-page="blogDetails" href="#blogDetails" class="blog-link">Read More</a>
+                <p>${recentblog[0].body.slice(0, 100)}...<a data-id=${recentblog[0].id} data-page="blogDetails" href="#blogDetails" class="blog-link">Read More</a></p>
             </div>
         </li>`
         filterBlog() // attaches an onclick event to each blog for filtering when clicked
