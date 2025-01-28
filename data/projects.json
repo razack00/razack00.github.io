@@ -11,18 +11,18 @@
     "site_link": "https://bandainstitute.com",
     "github_link": "#"
   },
-    {
-      "id": "ac49",
-      "image": "/assets/media/e-store.png",
-      "name": "E-Store",
-      "description": "A responsive e-commerce shoe store that include search, categorisation, authentication and authorisation functionalities. Built with HTML, CSS JavaScript",
-      "body":"A responsive e-commerce shoe store that include search, categorisation, authentication and authorisation functionalities. Built with HTML, CSS JavaScript",
-      "category": "Web Development",
-      "technologies": ["HTML", "CSS", "JavaScript", "Github", "Fetch"],
-      "functionalities": ["Fetching producs use (Fetch)", "Authentication and Autorisation", "Filtering Products", "Add to Cart", "Display Product Details"],
-      "site_link": "https://ecom-shoe-store.netlify.app/",
-      "github_link": "https://github.com/razack00/e-store"
-    },
+  {
+    "id": "8717",
+    "image": "/assets/media/viva-express.jpg",
+    "name": "Viva Express",
+    "description": "A Bus  travel agency booking system website which allows travelers/passengers to book a bus ticket from the comfort or their homes or where ever the may be.",
+    "body": "A Bus  travel agency booking system website which allows travelers/passengers to book a bus ticket from the comfort or their homes or where ever the may be.",
+    "category": "Web Development",
+    "technologies": ["React", "Bootstrap", "Git", "Json-Server", "Github"],
+    "functionalities": ["Responsiveness", "Bus searching", "Filtering Buses", "Available seats", "Fetch and Display", "react context"],
+    "site_link": "https://vivaexpress.netlify.app/",
+    "github_link": "https://github.com/razack00/viva-Express"
+  },
     {
       "id": "ac42",
       "image": "/assets/media/bmw.jpg",
@@ -48,16 +48,16 @@
       "github_link": "https://github.com/razack00/budgetr"
     },
     {
-      "id": "8717",
-      "image": "/assets/media/viva-express.jpg",
-      "name": "Viva Express",
-      "description": "A Bus  travel agency booking system website which allows travelers/passengers to book a bus ticket from the comfort or their homes or where ever the may be.",
-      "body": "A Bus  travel agency booking system website which allows travelers/passengers to book a bus ticket from the comfort or their homes or where ever the may be.",
+      "id": "ac49",
+      "image": "/assets/media/e-store.png",
+      "name": "E-Store",
+      "description": "A responsive e-commerce shoe store that include search, categorisation, authentication and authorisation functionalities. Built with HTML, CSS JavaScript",
+      "body":"A responsive e-commerce shoe store that include search, categorisation, authentication and authorisation functionalities. Built with HTML, CSS JavaScript",
       "category": "Web Development",
-      "technologies": ["React", "Bootstrap", "Git", "Json-Server", "Github"],
-      "functionalities": ["Responsiveness", "Bus searching", "Filtering Buses", "Available seats", "Fetch and Display", "react context"],
-      "site_link": "https://vivaexpress.netlify.app/",
-      "github_link": "https://github.com/razack00/viva-Express"
+      "technologies": ["HTML", "CSS", "JavaScript", "Github", "Fetch"],
+      "functionalities": ["Fetching producs use (Fetch)", "Authentication and Autorisation", "Filtering Products", "Add to Cart", "Display Product Details"],
+      "site_link": "https://ecom-shoe-store.netlify.app/",
+      "github_link": "https://github.com/razack00/e-store"
     },
     {
       "id": "87175",
